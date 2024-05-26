@@ -1,3 +1,15 @@
+document.querySelector('.menu-btn').addEventListener('click', function() {
+    document.querySelector('.nav').classList.toggle('active');
+});
+
+function switchSection(sectionId) {
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+    document.querySelector('.nav').classList.remove('active');
+}
+
 function addCharacter() {
     var name = prompt("Nome do Personagem:");
     if (name) {
