@@ -1,4 +1,5 @@
 document.querySelector('.menu-btn').addEventListener('click', function() {
+    this.querySelector('.menu-btn__burger').classList.toggle('open');
     document.querySelector('.nav').classList.toggle('active');
 });
 
@@ -8,6 +9,7 @@ function switchSection(sectionId) {
     });
     document.getElementById(sectionId).style.display = 'block';
     document.querySelector('.nav').classList.remove('active');
+    document.querySelector('.menu-btn__burger').classList.remove('open');
 }
 
 function addCharacter() {
