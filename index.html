@@ -9,20 +9,42 @@
 <body>
     <header>
         <h1>Writer.copilot</h1>
+        <div class="menu-btn">
+            <div class="menu-btn__burger"></div>
+        </div>
     </header>
-    <nav>
+    <nav class="nav">
         <ul>
-            <li><a href="personagens.html">Personagens</a></li>
-            <li><a href="mundo.html">Mundo</a></li>
-            <li><a href="timeline.html">Timeline</a></li>
+            <li><a href="#" onclick="switchSection('home')">Início</a></li>
+            <li><a href="#" onclick="switchSection('personagens')">Personagens</a></li>
+            <li><a href="#" onclick="switchSection('mundo')">Mundo</a></li>
+            <li><a href="#" onclick="switchSection('timeline')">Timeline</a></li>
         </ul>
     </nav>
-    <main>
-        <h2>Bem-vindo ao Writer.copilot</h2>
-        <p>Seu assistente digital para organizar livros de fantasia e ficção científica.</p>
+    <main id="main-content">
+        <section id="home">
+            <h2>Bem-vindo ao Writer.copilot</h2>
+            <p>Seu assistente digital para organizar livros de fantasia e ficção científica.</p>
+        </section>
+        <section id="personagens" class="section" style="display:none;">
+            <h2>Personagens</h2>
+            <div id="characters-list"></div>
+            <button onclick="addCharacter()">Adicionar Personagem</button>
+        </section>
+        <section id="mundo" class="section" style="display:none;">
+            <h2>Mundo</h2>
+            <div id="world-details"></div>
+            <button onclick="addWorldDetail()">Adicionar Detalhe do Mundo</button>
+        </section>
+        <section id="timeline" class="section" style="display:none;">
+            <h2>Timeline</h2>
+            <div id="events-timeline"></div>
+            <button onclick="addEvent()">Adicionar Evento</button>
+        </section>
     </main>
     <footer>
         <p>Writer.copilot © 2024</p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
